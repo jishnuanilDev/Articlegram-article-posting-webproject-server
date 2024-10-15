@@ -15,7 +15,9 @@ app.use(cors({
   }));
 dbConnect();
 app.use('/',userRoute);
-
+app.get('/api', (req, res) => {
+    res.send('API Home Page');
+  });
 app.listen(port,()=>{
     console.log(`server is running on ${port}`);
 })
